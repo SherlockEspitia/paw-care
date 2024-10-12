@@ -2,8 +2,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
-    url('./img/img-form-propietarios.jpg') no-repeat center center fixed;
+    filter: invert(0%);
+    background: linear-gradient(rgba(0, 25, 125, 0.75), rgba(0, 0, 0, 0.75)),
+    url('./img/Logo.svg') no-repeat center center fixed;
     background-size: cover;
 
 }

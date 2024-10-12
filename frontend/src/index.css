@@ -11,6 +11,35 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Light Palette */
+    /* CSS HEX */
+  --sky-blue: #87ceebff;
+  --tiffany-blue: #99d6cdff;
+  --antiflash-white: #f2f3f3ff;
+  --ebony: #4a5240ff;
+  --tan: #d2b48cff;
+
+  /* CSS HSL */
+  --sky-blue: hsla(197, 71%, 73%, 1);
+  --tiffany-blue: hsla(171, 43%, 72%, 1);
+  --antiflash-white: hsla(180, 4%, 95%, 1);
+  --ebony: hsla(87, 12%, 29%, 1);
+  --tan: hsla(34, 44%, 69%, 1);
+
+  /* Dark Pallete*/
+  /* CSS HEX */
+  --indigo-dye: #013f58ff;
+  --dark-slate-gray: #2f4f4fff;
+  --white-smoke: #f5f5f5ff;
+  --jet: #2c2c2cff;
+  --liver: #5d4037ff;
+
+  /* CSS HSL */
+  --indigo-dye: hsla(197, 98%, 17%, 1);
+  --dark-slate-gray: hsla(180, 25%, 25%, 1);
+  --white-smoke: hsla(0, 0%, 96%, 1);
+  --jet: hsla(0, 0%, 17%, 1);
+  --liver: hsla(14, 26%, 29%, 1);
 }
 
 a {
