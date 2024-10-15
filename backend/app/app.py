@@ -1,3 +1,9 @@
-from db.connection import URL_CONN
+from fastapi import FastAPI
+from db.connection import session
 
-print(URL_CONN)
+app = FastAPI()
+
+@app.get("/")
+async def root():
+    
+    return {'message': 'Hola, Bienvenido a Paw Care'}
