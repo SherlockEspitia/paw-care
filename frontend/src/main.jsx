@@ -7,7 +7,7 @@ import './Propietarios.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App/> 
-    <Propietarios></Propietarios>
+    <App/>    
+    {/* <Propietarios></Propietarios>  */} 
   </StrictMode>,
 )
