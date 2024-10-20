@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    align-items: center;
+    height: 16vh;
+    /*width: 94vw;*/
+    border-radius: 10px;
+    & .logo > img{
+        width: 128px;
+        height: 128px;
+    }
+    
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: larger;
+    background: white;
+    & a{
+        text-decoration: none;
+        color: black;
+        margin: 0 1em; 
+        font-style: italic;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
