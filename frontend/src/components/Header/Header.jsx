@@ -5,7 +5,7 @@ function Header(){
 
     return (
         <header>
-            <img src="/src/img/Logo.svg" alt="AppCare" className='logo' height={100} width={100}/>
+            <img src="/src/img/Logo.svg" alt="AppCare" className='logo' height={120} width={120}/>
             <nav>
                 <a href="/">Inicio</a>
                 <a href="">Servicios</a>
