@@ -1,15 +1,14 @@
-import React from 'react'
 import './Layout.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
-const Layout = ({children})=>{
+function Layout({children}){
     return(
-        <div>
+        <>
             <Header/>
             <main>{children}</main>
             <Footer/>
-        </div>
+        </>
     )
 }
 
