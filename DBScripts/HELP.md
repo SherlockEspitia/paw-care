@@ -4,23 +4,30 @@ Se seguiran los pasos propuestos en la siguiente guia  [Guru99](https://www.guru
 
 Tambien se recomienda leer la siguiente guia [XAMPP y MYSQL](https://jhonmosquera.com/bases-de-datos-xampp/)
 
-- Lo primero es instalar la base de datos en este caso es MYSQL [descargar](https://www.mysql.com/downloads/) buscar el instalador del [community en windows](https://dev.mysql.com/downloads/installer/) 
+-Lo primero es instalar la base de datos en este caso es MYSQL [descargar](https://www.mysql.com/downloads/) buscar el instalador del [community en windows](https://dev.mysql.com/downloads/installer/)
 > [!NOTA]  
 > Es importante no olvidar la contraseña de usuario root que se pone en MySQL
-
 > [!NOTA]  
 No es la version final de esta explicación
 
 -Una vez instalado verificar que el comando mysql funcione si es asi:
 Puedes usar la siguiente lista de comandos
-```
-$ mysql -u nom-usr -p base-dato < script.sql
+
+``` bash or cmd
+mysql -u nom-usr -p base-dato < script.sql
 ```
 
 En caso que no funcione se puede abrir la terminal de MySql X.X Command Line Interface
 En donde se puede ejecutar cualquiera de los siguientes codigos:
-```
+
+``` bash
 source ./ruta/script.sql
 -----------------
 . ./ruta/script.sql
 ```
+
+## Cambios
+
+- Se deja un nuevo script donde se eliminara las tables de tienda y productos para simplificar la app solo a la prestación de los servicios para mascotas.
+
+- Se modifica la entidad cuidador para que contenga a las guarderias, pasaeadores y entrenadores como un enum
