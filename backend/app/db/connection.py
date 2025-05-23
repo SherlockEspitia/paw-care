@@ -1,6 +1,7 @@
 from utils.settings import Settings
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import Session, sessionmaker
+from models import Base
 
 #settings(Settings):_Las configuraciones de la app
 settings = Settings()
@@ -33,6 +34,7 @@ class DBSession:
         '''
         self.url = url
         self.engine = create_engine(url)
+        Base.metadata.create_all(self.engine) # Crea las tablas si no existen
         self.Session = sessionmaker(bind=self.engine)
     
     def execute_query(self, query):
@@ -79,7 +81,7 @@ class DBSession:
 session = DBSession(URL_CONN)
 
 # Sirve para visualizar todas las tablas que estan presentes en la base de datos
-#metadata = MetaData()
+metadata = MetaData()
 #metadata.reflect(session.engine)
 
 #for t in metadata.tables:
