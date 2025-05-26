@@ -1,7 +1,7 @@
 from utils.settings import Settings
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import Session, sessionmaker
-from models import Base
+from backend.app.models.models import Base
 
 #settings(Settings):_Las configuraciones de la app
 settings = Settings()
