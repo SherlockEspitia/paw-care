@@ -2,6 +2,7 @@ from pydantic import Field, validator
 from typing import Optional
 from datetime import date, time
 from .base import BaseSchema
+from .servicio import ServicioResponse
 
 class AgendaBase(BaseSchema):
     """Schema base para Agenda"""
