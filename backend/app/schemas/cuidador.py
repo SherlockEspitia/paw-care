@@ -1,8 +1,9 @@
-from pydantic import EmailStr, Field
+from pydantic import ConfigDict, EmailStr, Field
 from typing import Optional, List
 from decimal import Decimal
 from enum import Enum
 from .base import BaseSchema
+from .calificacion_cuidador import CalificacionCuidadorResponse
 
 class TipoCuidador(str, Enum):
     """Tipos de cuidador disponibles"""
@@ -25,7 +26,21 @@ class CuidadorBase(BaseSchema):
 
 class CuidadorCreate(CuidadorBase):
     """Schema para crear un cuidador"""
-    pass
+    model_config = ConfigDict(        
+        json_schema_extra= {
+            "example": {
+                "nombre_cuidador": "Ana López",
+                "correo_electronico_cuidador": "ana.lopez@email.com",
+                "telefono_cuidador": "+57 311 987 6543",
+                "tipo_cuidador": "paseador",
+                "experiencia": 3,
+                "tarifas": "25000.00",
+                "especialidad": "Perros grandes",
+                "direccion": "Carrera 70 #25-15",
+                "capacidad": 5
+            }
+        }    
+    ) 
 
 class CuidadorUpdate(BaseSchema):
     """Schema para actualizar un cuidador"""
@@ -46,4 +61,14 @@ class CuidadorResponse(CuidadorBase):
 
 class CuidadorWithCalificaciones(CuidadorResponse):
     """Schema de cuidador con sus calificaciones"""
-    calificaciones: List['CalificacionCuidadorResponse'] = []
+    calificaciones: List['CalificacionCuidadorResponse'] = Field(default=[], description="Lista de calificaciones del cuidador")
+    promedio_calificacion: Optional[float] = Field(None, description="Promedio de calificaciones", example=4.5)
+    total_calificaciones: int = Field(0, description="Total de calificaciones recibidas", example=16)
+    
+class CuidadorDisponible(BaseSchema):
+    IDcuidador: int
+    nombre_cuidador: str
+    tipo_cuidador: TipoCuidador
+    tarifas: Optional[Decimal]
+    promedio_calificacion: Optional[float]
+    capacidad_disponible: int = Field(..., description="Capacidad disponible actual")

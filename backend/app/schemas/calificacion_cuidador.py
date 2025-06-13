@@ -2,6 +2,9 @@ from pydantic import Field
 from typing import Optional
 from datetime import datetime
 from .base import BaseSchema
+from .propietario import PropietarioResponse
+from .cuidador import CuidadorResponse
+from .servicio import ServicioResponse
 
 class CalificacionCuidadorBase(BaseSchema):
     """Schema base para CalificacionCuidador"""

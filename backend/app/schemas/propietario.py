@@ -1,6 +1,7 @@
-from pydantic import EmailStr, Field
+from pydantic import ConfigDict, EmailStr, Field
 from typing import Optional, List
 from .base import BaseSchema
+from .mascota import MascotaResponse
 
 class PropietarioBase(BaseSchema):
     """Schema base para Propietario"""
@@ -13,8 +14,18 @@ class PropietarioBase(BaseSchema):
 
 class PropietarioCreate(PropietarioBase):
     """Schema para crear un propietario"""
-    
-    pass
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example":{
+                "nombres": "Sergio Andres",
+                "apellidos": "Cano Sosa",
+                "correo_electronico_propietario": "sergiocano@email.com",
+                "telefono_propietario":"+57 300 123 4567",
+                "direccion_propietario":"Carrera 52 #12-34",
+                "ciudad_propietario": "Medellín"
+            }
+        }
+    )
 
 class PropietarioUpdate(BaseSchema):
     """Schema para actualizar un propietario"""
@@ -24,11 +35,35 @@ class PropietarioUpdate(BaseSchema):
     telefono_propietario: Optional[str] = Field(None, max_length=45)
     direccion_propietario: Optional[str] = Field(None, max_length=45)
     ciudad_propietario: Optional[str] = Field(None, max_length=45)
+    
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example":{
+                "nombres":"Juan Carlos",
+                "telefono_propietario":"+57 300 987 6666"
+            }
+        }
+    )
 
 class PropietarioResponse(PropietarioBase):
     """Schema para respuesta de propietario"""
-    IDpropietario: int
+    IDpropietario: int = Field(..., description="Id unico del propietario", example=1)
     
 class PropietarioWithMascotas(PropietarioResponse):
     """Schema de propietario con sus mascotas"""
-    mascotas: List['MascotaResponse'] = []
+    mascotas: List['MascotaResponse'] = Field(default=[], description="Lista de mascotas del propietario")
+    
+class PropietarioList(BaseSchema):
+    """Listado de paginado de propietarios"""
+    propietarios: List[PropietarioResponse]
+    total: int = Field(..., description="Total de propietarios", example=100)
+    page: int = Field(..., description="Pagina Actual", example=1)
+    per_page: int = Field(..., description="Elementos por pagina", example=10)
+    
+class PropietarioSummary(BaseSchema):
+    """Resumen de Listas de Usuario"""
+    IDpropietario: int
+    nombres: int
+    apellidos: str
+    telefono_propietario: str
+    
