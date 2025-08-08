@@ -27,3 +27,16 @@ class PropietarioService:
                 detail=f"Propietario con ID {propietario_id} no encontrado"
             )
         return PropietarioResponse.model_validate(propietario)
+
+    def create_propietario(self, propietario_data: PropietarioCreate)->PropietarioResponse:
+        if self.repository.get_by_phone(propietario_data.telefono_propietario):
+            raise HTTPException(
+                status_code= status.HTTP_400_BAD_REQUEST,
+                detail="Ya existe un propietario con este numero de telefono"
+            )
+        
+        if self.repository.get_by_email(propietario_data.correo_electronico_propietario):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Ya existe un propietario con este correo electronico"
+            )
