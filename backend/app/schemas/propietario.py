@@ -63,7 +63,7 @@ class PropietarioList(BaseSchema):
 class PropietarioSummary(BaseSchema):
     """Resumen de Listas de Usuario"""
     IDpropietario: int
-    nombres: int
+    nombres: str
     apellidos: str
     telefono_propietario: str
     
