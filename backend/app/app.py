@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from db.connection import session
 
 app = FastAPI()
 
