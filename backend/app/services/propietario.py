@@ -40,3 +40,41 @@ class PropietarioService:
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="Ya existe un propietario con este correo electronico"
             )
+        
+        new_propietario = self.repository.create(propietario_data)
+        return PropietarioResponse.model_validate(new_propietario)
+    
+    def update_propietario(self, propietario_id:int, propietario_data:PropietarioUpdate)-> PropietarioResponse:
+        if not self.repository.get_by_id(propietario_id):
+            raise HTTPException(
+                status_code = status.HTTP_404_NOT_FOUND,
+                detail = f'Propietario con ID {propietario_id} no encontrado'
+            )
+        if propietario_data.telefono_propietario:
+            existing_phone = self.repository.get_by_phone(propietario_data.telefono_propietario)
+            if existing_phone and existing_phone.IDpropietario != propietario_id:
+                raise HTTPException(
+                    status_code = status.HTTP_400_BAD_REQUEST,
+                    detail = "Ya existe un propietario con este número de teléfono"
+                )
+        update_propietario = self.repository.update(propietario_id, propietario_data)
+        return PropietarioResponse.model_validate(update_propietario)
+    
+    def delete_propietario(self, propietario_id: int)->dict:
+        if not self.repository.delete(propietario_id):
+            raise HTTPException(
+                status_code = status.HTTP_404_NOT_FOUND,
+                detail= f"Propietario con ID {propietario_id} no encontrado"
+            )
+        return {"message": "Propietario eliminado exitosamente"}
+    
+    def search_propietarios(self, search_term:str)->List[PropietarioSummary]:
+        propietarios = self.repository.search_by_name(search_term)
+        return [
+            PropietarioSummary(IDpropietario=p.IDpropietario, nombres=p.nombres, apellidos=p.apellidos, telefono_propietario=p.telefono_propietario) 
+            for p in propietarios
+        ]
+    
+    def get_propietario_by_city(self, ciudad:str)->List[PropietarioResponse]:
+        propietarios = self.repository.get_by_city(ciudad)
+        return [PropietarioResponse.model_validate(p) for p in propietarios]
