@@ -1,7 +1,9 @@
 from pydantic import ConfigDict, EmailStr, Field
-from typing import Optional, List
-from .base import BaseSchema
-from .mascota import MascotaResponse
+from typing import Optional, List, TYPE_CHECKING
+from schemas.base import BaseSchema
+
+if TYPE_CHECKING:
+    from schemas.mascota import MascotaResponse
 
 class PropietarioBase(BaseSchema):
     """Schema base para Propietario"""

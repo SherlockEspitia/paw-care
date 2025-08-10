@@ -1,7 +1,7 @@
 from utils.settings import Settings
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import Session, sessionmaker
-from app.models import Base
+from models import Base
 
 #settings(Settings):_Las configuraciones de la app
 settings = Settings()
@@ -91,7 +91,7 @@ metadata = MetaData()
 #    print(t)
 
 def get_db():
-    session = db_session.get_sesion()
+    session = db_session.get_session()
     try:
        yield session
     finally:

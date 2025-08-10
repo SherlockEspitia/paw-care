@@ -3,7 +3,10 @@ from typing import Optional, List
 from decimal import Decimal
 from enum import Enum
 from .base import BaseSchema
-from .calificacion_cuidador import CalificacionCuidadorResponse
+
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from .calificacion_cuidador import CalificacionCuidadorResponse
 
 class TipoCuidador(str, Enum):
     """Tipos de cuidador disponibles"""
@@ -65,7 +68,7 @@ class CuidadorWithCalificaciones(CuidadorResponse):
     promedio_calificacion: Optional[float] = Field(None, description="Promedio de calificaciones", example=4.5)
     total_calificaciones: int = Field(0, description="Total de calificaciones recibidas", example=16)
     
-class CuidadorDisponible(BaseSchema):
+class CuidadorAvailable(BaseSchema):
     IDcuidador: int
     nombre_cuidador: str
     tipo_cuidador: TipoCuidador

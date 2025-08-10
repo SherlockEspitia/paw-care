@@ -1,4 +1,5 @@
-from .base import Base, relationships
+from .base import Base
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, BigInteger, Integer, Text, DateTime, ForeignKey, CheckConstraint
 from datetime import datetime
 
@@ -14,6 +15,6 @@ class CalificacionCuidador(Base):
     fecha_calificacion = Column(DateTime, default=datetime.utcnow)
     
     # Relaciones
-    propietario = relationships("Propietario")
-    cuidador = relationships("Cuidador", back_populates="calificaciones")
-    servicio = relationships("Servicio", back_populates="calificaciones")
+    propietario = relationship("Propietario")
+    cuidador = relationship("Cuidador", back_populates="calificaciones")
+    servicio = relationship("Servicio", back_populates="calificaciones")

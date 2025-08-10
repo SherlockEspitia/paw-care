@@ -2,7 +2,8 @@ from pydantic import Field, validator
 from typing import Optional
 from datetime import datetime
 from enum import Enum
-from .base import BaseSchema
+from schemas.base import BaseSchema
+#from schemas.servicio import ServicioResponse
 
 class EstadoServicio(str, Enum):
     """Estados disponibles para el servicio"""

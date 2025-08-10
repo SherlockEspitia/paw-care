@@ -1,7 +1,10 @@
 from pydantic import Field
-from typing import Optional, List
+from typing import Optional, List, TYPE_CHECKING
 from datetime import date
-from .base import BaseSchema
+
+from schemas.base import BaseSchema
+if TYPE_CHECKING:
+    from schemas.propietario import PropietarioResponse
 
 class MascotaBase(BaseSchema):
     """Schema base para Mascota"""

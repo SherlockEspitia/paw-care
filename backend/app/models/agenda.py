@@ -1,8 +1,9 @@
-from .base import Base, relationships
+from .base import Base
 from sqlalchemy import Column, Integer, BigInteger, Date, Time, ForeignKey
+from sqlalchemy.orm import relationship
 
 class Agenda(Base):
-    __tablename__ = 'Agenda'
+    __tablename__ = 'agenda'
     
     IDagenda = Column(Integer, primary_key=True, autoincrement=True)
     fecha = Column(Date)
@@ -11,4 +12,4 @@ class Agenda(Base):
     IDservicio = Column(BigInteger, ForeignKey('servicio.IDservicio'), nullable=False)
     
     # Relaciones
-    servicio = relationships("Servicio", back_populates="agendas")
+    servicio = relationship("Servicio", back_populates="agendas")

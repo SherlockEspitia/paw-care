@@ -1,4 +1,5 @@
-from .base import Base, relationships
+from .base import Base
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, BigInteger, String, Text, DECIMAL, ForeignKey
 
 class Servicio(Base):
@@ -13,9 +14,9 @@ class Servicio(Base):
     tipo_servicio = Column(String(45))
     
     # Relaciones
-    cuidador = relationships("Cuidador", back_populates="servicios")
-    mascota = relationships("Mascota", back_populates="servicios")
-    propietario_rel = relationships("Propietario")
-    agendas = relationships("Agenda", back_populates="servicio")
-    historial = relationships("HistorialServicio", uselist=False, back_populates="servicio")
-    calificaciones = relationships("CalificacionCuidador", back_populates="servicio")
+    cuidador = relationship("Cuidador", back_populates="servicios")
+    mascota = relationship("Mascota", back_populates="servicios")
+    propietario_rel = relationship("Propietario")
+    agendas = relationship("Agenda", back_populates="servicio")
+    historial = relationship("HistorialServicio", uselist=False, back_populates="servicio")
+    calificaciones = relationship("CalificacionCuidador", back_populates="servicio")

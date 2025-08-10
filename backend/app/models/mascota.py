@@ -1,4 +1,5 @@
-from .base import Base, relationships
+from .base import Base
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, BigInteger, String, Date, ForeignKey
 
 class Mascota(Base):
@@ -12,5 +13,5 @@ class Mascota(Base):
     IDpropietario = Column(BigInteger, ForeignKey('propietario.IDpropietario'), nullable=False)
     
     # Relaciones
-    propietario = relationships("Propietario", back_populates="mascotas")
-    servicios = relationships("Servicio", back_populates="mascota")
+    propietario = relationship("Propietario", back_populates="mascotas")
+    servicios = relationship("Servicio", back_populates="mascota")

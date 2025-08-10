@@ -7,7 +7,7 @@ class ValidationError(BaseModel):
     message: str = Field(..., description="Mensaje de error")
     code: str = Field(..., description="Codigo de error")
 
-class BulkOperationsRequest(BaseModel):
+class BulkOperationRequest(BaseModel):
     ids: List[int] = Field(..., description="Lista de IDs a procesar", min_items=1)
     
     @validator('ids')

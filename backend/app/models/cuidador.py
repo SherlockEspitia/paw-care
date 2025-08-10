@@ -1,4 +1,5 @@
-from .base import Base, relationships
+from .base import Base
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, BigInteger, String, Enum, Text, DECIMAL, Integer
 
 class Cuidador(Base):
@@ -17,5 +18,5 @@ class Cuidador(Base):
     capacidad = Column(Integer)
     
     # Relaciones
-    servicios = relationships("Servicio", back_populates="cuidador")
-    calificaciones = relationships("CalificacionCuidador", back_populates="cuidador")
+    servicios = relationship("Servicio", back_populates="cuidador")
+    calificaciones = relationship("CalificacionCuidador", back_populates="cuidador")

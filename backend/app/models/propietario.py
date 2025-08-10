@@ -1,4 +1,5 @@
-from .base import Base, relationships
+from .base import Base
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, BigInteger, String
 
 class Propietario(Base):
@@ -13,4 +14,4 @@ class Propietario(Base):
     ciudad_propietario = Column(String(45), nullable=False)
     
     # Relación con mascotas
-    mascotas = relationships("Mascota", back_populates="propietario")
+    mascotas = relationship("Mascota", back_populates="propietario")

@@ -1,4 +1,5 @@
-from .base import Base, relationships
+from .base import Base
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, BigInteger, DateTime, Enum, Text, ForeignKey
 
 
@@ -13,4 +14,4 @@ class HistorialServicio(Base):
     notas = Column(Text)
     
     # Relación
-    servicio = relationships("Servicios", back_populates="historial")
+    servicio = relationship("Servicio", back_populates="historial")

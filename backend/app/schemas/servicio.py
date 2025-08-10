@@ -1,7 +1,13 @@
 from pydantic import Field
 from typing import Optional, List
 from decimal import Decimal
-from .base import BaseSchema
+from schemas.base import BaseSchema
+from schemas.cuidador import CuidadorResponse
+from schemas.mascota import MascotaResponse
+from schemas.propietario import PropietarioResponse
+from schemas.agenda import AgendaResponse
+from schemas.historial_servicio import HistorialServicioResponse
+from schemas.calificacion_cuidador import CalificacionCuidadorResponse
 
 class ServicioBase(BaseSchema):
     """Schema base para Servicio"""
