@@ -1,10 +1,25 @@
 .hero_area {
+    background-color: #e0f7fa;
+    padding: 40px 20px;
+}
+
+.hero_area {
     height: 98vh;
     position: relative;
 }
 
 .hero_area {
     height: auto;
+}
+
+.header_section {
+    background-color: #f6f8f7;
+    padding-top: 15px;
+}
+
+.header_section {
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import './Slider.css'
 import imgInicio from '../../img/imgInicio.png'
 

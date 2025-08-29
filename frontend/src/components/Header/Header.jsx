@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom'
 import logo from '../../img/logo.jpg'
 
 function Header() {
@@ -11,17 +12,20 @@ function Header() {
                     <nav>
                         <div className="navbar">
 
-                            <a className="navbar-brand">
+                            <Link className="navbar-brand">
                                 <img src={logo} alt="logo" />
+
                                 <span>
                                     apPET
                                 </span>
-                            </a>
+                            </Link>
 
-                            <a className="nav-link" href="index.html">Inicio</a>
-                            <a className="nav-link" href="servicios.html">Servicios</a>
-                            <a className="nav-link" href="galeria.html">Galería</a>
-                            <a className="nav-link" href="contacto.html">Contacto</a>
+                            <Link className="nav-link" to="/">Inicio</Link>
+                            <Link className="nav-link" to="/servicios">Servicios</Link>
+                            <Link className="nav-link" to="/galeria">Galería</Link>
+                            <Link className="nav-link" to="/contacto">Contacto</Link>
+
+
                         </div>
                     </nav>
                 </div>
