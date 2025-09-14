@@ -1,10 +1,9 @@
 from pydantic import ConfigDict, EmailStr, Field
-from typing import Optional, List
+from typing import Optional, List, TYPE_CHECKING
 from decimal import Decimal
 from enum import Enum
 from .base import BaseSchema
 
-from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .calificacion_cuidador import CalificacionCuidadorResponse
 
