@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import propietario
+from routes import propietario, cuidador
+
+prefix = "/api/v1"
 
 app = FastAPI(
     title= "ApPet API",
@@ -10,7 +12,7 @@ app = FastAPI(
     redoc_url="/redoc",
     contact={
         "name": "With ❤️ for Checho Cano and Sherlock Espitia",
-        "email": "sherlockespita@gmail.com"
+        "email": "sherlockespitia@gmail.com"
     }
 )
 
@@ -22,7 +24,8 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-app.include_router(propietario.router, prefix="/api/v1")
+app.include_router(propietario.router, prefix=prefix)
+app.include_router(cuidador.router, prefix=prefix)
 
 @app.get("/", tags=["Root", "Inicio"])
 async def root():
