@@ -1,0 +1,115 @@
+.sub_page .hero_area {
+    height: auto;
+}
+
+.map_section {
+    position: relative;
+}
+
+.map_section #map {
+    position: absolute;
+}
+
+.map_section .form_container {
+    position: relative;
+    width: 50%;
+    z-index: 9;
+}
+
+.map_section .form_container form {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 45px;
+    margin: 75px 0;
+}
+
+.map_section .form_container input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #111111;
+    padding-top: 35px;
+    width: 100%;
+}
+
+.map_section .form_container input.message-box {
+    padding-top: 55px;
+}
+
+.map_section .form_container button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #023b48;
+    border: 1px solid #023b48;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.map_section .form_container button:hover {
+    background-color: transparent;
+    color: #023b48;
+}
+
+.info_section {
+    background-color: #0dc3ff;
+}
+
+.info_items {
+    width: 70%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.info_items .item {
+    width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.info_items .item .img-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.info_items .item .detail-box {
+    margin-top: 5px;
+    color: #fff;
+}
+
+.info_items {
+    position: relative;
+}
+
+.info_items a {
+    position: relative;
+}
+
+.info_items .item .img-box.box-1 {
+    background-image: url(../../img/location-white.png);
+}
+
+.info_items .item .img-box.box-2 {
+    background-image: url(../../img/telephone-white.png);
+}
+
+.info_items .item .img-box.box-3 {
+    background-image: url(../../img/envelope-white.png);
+}
