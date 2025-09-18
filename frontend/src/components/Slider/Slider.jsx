@@ -1,5 +1,6 @@
 import './Slider.css'
 import imgInicio from '../../img/imgInicio.png'
+import { Link } from 'react-router-dom'
 
 export const Slider = () => {
     return (
@@ -15,8 +16,8 @@ export const Slider = () => {
                             a tu mascota. Nos aseguramos de que cada perro reciba el amor y la atención que merece.
                         </p>
                         <div className="btn-box">
-                            <a className="btn-1" href="">Regístrate</a>
-                            <a className="btn-2" href="">Iniciar sesión</a>
+                            <Link className="btn-1" to="">Regístrate</Link>
+                            <Link className="btn-2" to="/login">Iniciar sesión</Link>
                         </div>
                     </div>
 
