@@ -8,11 +8,11 @@ function Header() {
     return (
         <div className="hero_area">
             <header className="header_section">
-                <div className="container-fluid">
+                <div className="container_fluid">
                     <nav>
                         <div className="navbar">
 
-                            <Link className="navbar-brand">
+                            <Link className="navbar_brand">
                                 <img src={logo} alt="logo" />
 
                                 <span>
@@ -20,10 +20,10 @@ function Header() {
                                 </span>
                             </Link>
 
-                            <Link className="nav-link" to="/">Inicio</Link>
-                            <Link className="nav-link" to="/servicios">Servicios</Link>
-                            <Link className="nav-link" to="/galeria">Galería</Link>
-                            <Link className="nav-link" to="/contacto">Contacto</Link>
+                            <Link className="nav_link" to="/">Inicio</Link>
+                            <Link className="nav_link" to="/servicios">Servicios</Link>
+                            <Link className="nav_link" to="/galeria">Galería</Link>
+                            <Link className="nav_link" to="/contacto">Contacto</Link>
 
 
                         </div>

@@ -8,7 +8,7 @@ export const Slider = () => {
             <div className="container">
                 <div className="slider_content">
 
-                    <div className="slider_detail-box">
+                    <div className="slider_detail_box">
                         <h1>apPET <span>Cuidado Canino</span></h1>
                         <p>
                             Deja el cuidado de tu mascota en manos de expertos. En apPET ofrecemos servicios de calidad.
