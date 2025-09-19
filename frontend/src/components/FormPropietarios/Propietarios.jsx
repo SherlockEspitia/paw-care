@@ -88,7 +88,7 @@ function Propietarios() {
                     <div className="form-group">
                         <label htmlFor="email">Correo Electrónico</label>
                         <input
-                            type="email"
+                            type="text"
                             id="email"
                             name="email"
                             value={formData.email}
