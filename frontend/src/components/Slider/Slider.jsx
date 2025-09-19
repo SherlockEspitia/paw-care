@@ -16,7 +16,7 @@ export const Slider = () => {
                             a tu mascota. Nos aseguramos de que cada perro reciba el amor y la atención que merece.
                         </p>
                         <div className="btn-box">
-                            <Link className="btn-1" to="">Regístrate</Link>
+                            <Link className="btn-1" to="/registro">Regístrate</Link>
                             <Link className="btn-2" to="/login">Iniciar sesión</Link>
                         </div>
                     </div>
