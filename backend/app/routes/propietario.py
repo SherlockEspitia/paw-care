@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, Query, Path, status
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from db.connection import get_db
-from schemas.propietario import (PropietarioCreate, PropietarioList, PropietarioResponse, PropietarioSummary, PropietarioUpdate)
-from services.propietario import PropietarioService
-from schemas.response_models import PaginatedResponse
+from app.db.connection import get_db
+from app.schemas.propietario import (PropietarioCreate, PropietarioList, PropietarioResponse, PropietarioSummary, PropietarioUpdate)
+from app.services.propietario import PropietarioService
+from app.schemas.response_models import PaginatedResponse
 
 router = APIRouter(
     prefix="/propietarios",

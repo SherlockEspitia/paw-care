@@ -9,7 +9,8 @@ class CuidadorService:
         self.repository = CuidadorRepository(session)
     
     def get_cuidador_by_id(self, cuidador_id) -> CuidadorResponse:
-        cuidador = self.repository.get_by_id(skip= skip, limit= per_page)
+        
+        cuidador = self.repository.get_by_id(cuidador_id)
         if not cuidador:
             raise HTTPException(
                 status_code = status.HTTP_404_NOT_FOUND,
@@ -48,12 +49,12 @@ class CuidadorService:
                 )
             
             update_cuidador = self.repository.update(cuidador_id, cuidador_data)
-            return CuidadorResponse.model_validate(update_propietario)
+            return CuidadorResponse.model_validate(update_cuidador)
 
     def delete_cuidador(self, cuidador_id:int)->dict:
         if not self.repository.delete(cuidador_id):
             raise HTTPException(
-                status_code = status.HTTP_404_NOT_FOUND
+                status_code = status.HTTP_404_NOT_FOUND,
                 detail = f"Cuidador con ID{cuidador_id} no encontrado"
             )
         return { "message":"Cuidador eliminado exitosamente"}

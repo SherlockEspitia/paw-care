@@ -22,12 +22,12 @@ async def create_cuidador(cuidador_data:CuidadorCreate, session:Session = Depend
     service = CuidadorService(session)
     return service.create_cuidador(cuidador_data)
 
-@router.put("/{cuidador_id}", response_model= PropietarioResponse, status_code=status.HTTP_201_CREATED, summary="Actualizar informacion de un cuidador existente")
+@router.put("/{cuidador_id}", response_model= CuidadorResponse, status_code=status.HTTP_201_CREATED, summary="Actualizar informacion de un cuidador existente")
 async def update_cuidador(cuidador_id:int=Path(..., description="ID del Cuidador", gt=0), cuidador_data:CuidadorUpdate=..., session:Session=Depends(get_db)):
     service = CuidadorService(session)
     return service.update_cuidador(cuidador_id, cuidador_data)
 
-@router.delete("/{propietario_id}", response_model=PropietarioResponse, summary="Eliminar un cuidador del sistema")
+@router.delete("/{cuidador_id}", response_model= CuidadorResponse, summary="Eliminar un cuidador del sistema")
 async def delete_cuidador(cuidador_id:int=Path(..., description="ID del cuidador", gt=0), session:Session = Depends(get_db)):
     service = CuidadorService(session)
     return service.delete_cuidador(cuidador_id)
