@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import func, text
 from typing import List, Optional
-from models.cuidador import Cuidador
-from schemas.cuidador import CuidadorCreate, CuidadorUpdate
+from app.models.cuidador import Cuidador
+from app.schemas.cuidador import CuidadorCreate, CuidadorUpdate
 
 class CuidadorRepository:
     def __init__(self, session:Session):

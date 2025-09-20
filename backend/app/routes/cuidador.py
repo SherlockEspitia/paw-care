@@ -1,15 +1,15 @@
 from fastapi import APIRouter, Depends, Query, Path, status
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from db.connection import get_db
-from schemas.cuidador import CuidadorCreate, CuidadorResponse, CuidadorUpdate
-from services.cuidador import CuidadorService
-from schemas.response_models import PaginatedResponse
+from app.db.connection import get_db
+from app.schemas.cuidador import CuidadorCreate, CuidadorResponse, CuidadorUpdate
+from app.services.cuidador import CuidadorService
+from app.schemas.response_models import PaginatedResponse
 
 router = APIRouter(
     prefix='/cuidadores',
     tags= ['Cuidadores'],
-    responses = {404, {"description":"No encontrado"}}
+    responses = {404: {"description":"No encontrado"}}
 )
 
 @router.get("/{cuidador_id}", response_model=CuidadorResponse, summary="Obtener cuidador", description="Obtener informacion detallada de un propietario por su ID")

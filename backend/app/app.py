@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routes import propietario, cuidador
+from app.routes import propietario_router, cuidador_router
 
 prefix = "/api/v1"
 
@@ -24,8 +24,8 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-app.include_router(propietario.router, prefix=prefix)
-app.include_router(cuidador.router, prefix=prefix)
+app.include_router(propietario_router, prefix=prefix)
+app.include_router(cuidador_router, prefix=prefix)
 
 @app.get("/", tags=["Root", "Inicio"])
 async def root():
