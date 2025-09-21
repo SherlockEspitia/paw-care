@@ -1,9 +1,11 @@
 from pydantic import Field, validator
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from datetime import datetime
 from enum import Enum
 from app.schemas.base import BaseSchema
-#from schemas.servicio import ServicioResponse
+
+if TYPE_CHECKING:
+    from app.schemas.servicio import ServicioResponse
 
 class EstadoServicio(str, Enum):
     """Estados disponibles para el servicio"""

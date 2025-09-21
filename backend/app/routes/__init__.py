@@ -1,7 +1,9 @@
 from .cuidador import router as cuidador_router
 from .propietario import router as propietario_router
+from .mascota import router as mascota_router
 
 __all__=[
     cuidador_router,
-    propietario_router
+    propietario_router,
+    mascota_router
 ]
