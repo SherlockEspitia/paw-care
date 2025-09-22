@@ -2,6 +2,11 @@ from app.utils.settings import Settings
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import Session, sessionmaker
 from app.models import Base
+from contextlib import contextmanager
+from typing import Generator, Any, List, Type, TypeVar
+from sqlalchemy.orm.decl_api import DeclarativeMeta
+
+T = TypeVar('T', bound=DeclarativeMeta)
 
 #settings(Settings):_Las configuraciones de la app
 settings = Settings()
@@ -35,7 +40,7 @@ class DBSession:
         self.url = url
         self.engine = create_engine(url)
         Base.metadata.create_all(self.engine) # Crea las tablas si no existen
-        self.SessionLocal = sessionmaker(bind=self.engine)
+        self.SessionLocal = sessionmaker(bind=self.engine, autocommit=False, autoflush=False)
     
     def get_session(self):
         return self.SessionLocal()
