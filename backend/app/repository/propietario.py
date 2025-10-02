@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import func, text
 from typing import List, Optional
-from models.propietario import Propietario
-from schemas.propietario import PropietarioCreate, PropietarioUpdate
+from app.models.propietario import Propietario
+from app.schemas.propietario import PropietarioCreate, PropietarioUpdate
 
 class PropietarioRepository:
     def __init__(self, session: Session):

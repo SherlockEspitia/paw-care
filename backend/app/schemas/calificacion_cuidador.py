@@ -1,12 +1,12 @@
 from pydantic import Field
 from typing import Optional
 from datetime import datetime
-from schemas.base import BaseSchema
-from schemas.propietario import PropietarioResponse
+from app.schemas.base import BaseSchema
+from app.schemas.propietario import PropietarioResponse
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from schemas.cuidador import CuidadorResponse
-    from schemas.servicio import ServicioResponse
+    from app.schemas.cuidador import CuidadorResponse
+    from app.schemas.servicio import ServicioResponse
 
 class CalificacionCuidadorBase(BaseSchema):
     """Schema base para CalificacionCuidador"""

@@ -1,8 +1,8 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from repository.propietario import PropietarioRepository
-from schemas.propietario import (PropietarioCreate, PropietarioUpdate, PropietarioResponse, PropietarioList, PropietarioSummary)
+from app.repository.propietario import PropietarioRepository
+from app.schemas.propietario import (PropietarioCreate, PropietarioUpdate, PropietarioResponse, PropietarioList, PropietarioSummary)
 
 class PropietarioService:
     def __init__(self, session: Session):

@@ -2,7 +2,7 @@ from pydantic import Field, validator
 from typing import Optional
 from datetime import datetime
 from enum import Enum
-from schemas.base import BaseSchema
+from app.schemas.base import BaseSchema
 #from schemas.servicio import ServicioResponse
 
 class EstadoServicio(str, Enum):
