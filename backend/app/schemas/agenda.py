@@ -1,8 +1,9 @@
 from pydantic import Field, validator
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from datetime import date, time
 from app.schemas.base import BaseSchema
-#from schemas.servicio import ServicioResponse
+if TYPE_CHECKING:
+    from app.schemas.servicio import ServicioResponse
 
 class AgendaBase(BaseSchema):
     """Schema base para Agenda"""
