@@ -19,6 +19,8 @@ luego en esta carpeta se puede visualizar todos los artefactos necesarios para i
 ```fastapi dev app.py```
 tambien se puede dejar el modo escucha activado para trabajar sobre cuando se esta probando la API con el siguiente comando
 ```python -m uvicorn app:app --reload```
+este comando se debe ejecutar sobre la raiz del proyecto en este caso el backend
+```$ python -m uvicorn app.app:app --reload```
 
 Una vez inicia la ApiRest se podra navegar a el mediante la url <http://127.0.0.1:8000></br>
 Y sera visible un mensaje de bienvenida y en la url <http://127.0.0.1:8000/docs>

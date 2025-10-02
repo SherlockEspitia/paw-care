@@ -68,4 +68,4 @@ class PropietarioSummary(BaseSchema):
     nombres: str
     apellidos: str
     telefono_propietario: str
-    
+     
