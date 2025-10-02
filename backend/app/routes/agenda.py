@@ -4,7 +4,7 @@ from datetime import date, time
 from typing import List, Optional
 
 from app.db.connection import get_db
-from repository.agenda import AgendaRepository
+from app.repository.agenda import AgendaRepository
 from app.services.agenda import AgendaService
 from app.schemas.agenda import AgendaCreate, AgendaResponse, AgendaUpdate, AgendaWithServicio
 

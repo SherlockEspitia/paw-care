@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from typing import List, Optional, Dict, Any
 
 from app.db.connection import get_db
-from repository.calificacion_cuidador import CalificacionCuidadorRepository
+from app.repository.calificacion_cuidador import CalificacionCuidadorRepository
 from app.services.calificacion_cuidador import CalificacionCuidadorService
 from app.schemas.calificacion_cuidador import CalificacionCuidadorCreate, CalificacionCuidadorResponse, CalificacionCuidadorUpdate, CalificacionCuidadorDetailed
 
