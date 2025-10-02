@@ -1,6 +1,7 @@
 from utils.settings import Settings
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import Session, sessionmaker
+from models import Base
 
 #settings(Settings):_Las configuraciones de la app
 settings = Settings()
@@ -33,7 +34,11 @@ class DBSession:
         '''
         self.url = url
         self.engine = create_engine(url)
-        self.Session = sessionmaker(bind=self.engine)
+        Base.metadata.create_all(self.engine) # Crea las tablas si no existen
+        self.SessionLocal = sessionmaker(bind=self.engine)
+    
+    def get_session(self):
+        return self.SessionLocal()
     
     def execute_query(self, query):
         '''
@@ -44,7 +49,7 @@ class DBSession:
         Retorna:
             sequence[Row]: result.fetchall() es una funcion que devuelve todo los Campos de una tabla
         '''
-        with self.Session() as session:
+        with self.SessionLocal() as session:
             result = session.execute(query)
             return result.fetchall()
     
@@ -58,7 +63,7 @@ class DBSession:
         Retorna:
             None: al ser un cambio sobre la base de datos no retorna nada 
         '''
-        with self.Session() as session:
+        with self.SessionLocal() as session:
             session.add(record)
             session.commit()
     
@@ -72,15 +77,22 @@ class DBSession:
         Retorna:
             result(Lista): Una lista con todos Campos de la base de datos
         '''
-        with self.Session() as session:
+        with self.SessionLocal() as session:
             result = session.query(model).all()
             return result
         
-session = DBSession(URL_CONN)
+db_session = DBSession(URL_CONN)
 
 # Sirve para visualizar todas las tablas que estan presentes en la base de datos
-#metadata = MetaData()
+metadata = MetaData()
 #metadata.reflect(session.engine)
 
 #for t in metadata.tables:
 #    print(t)
+
+def get_db():
+    session = db_session.get_session()
+    try:
+       yield session
+    finally:
+        session.close()
