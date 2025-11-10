@@ -15,13 +15,13 @@ export const Slider = () => {
                             Nuestro equipo de cuidadores está altamente capacitado para brindar la mejor atención
                             a tu mascota. Nos aseguramos de que cada perro reciba el amor y la atención que merece.
                         </p>
-                        <div className="btn-box">
+                        <div className="btn_box">
                             <Link className="btn-1" to="/registro">Regístrate</Link>
                             <Link className="btn-2" to="/login">Iniciar sesión</Link>
                         </div>
                     </div>
 
-                    <div className="slider_img-box">
+                    <div className="slider_img_box">
                         <img src={imgInicio} alt="imgInicio"/>
                     </div>
 

@@ -19,7 +19,7 @@ export const SectionClient = () => {
                     <div className="client_container">
                         <img src={ client } alt="Cliente" />
                         <h5>Sandy Mark</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet tincidunt enim.</p>
+                        <p>Recomendados, muy feliz con el resultado</p>
                     </div>
                     <div className="client_container">
                         <img src={ client } alt="Cliente" />
