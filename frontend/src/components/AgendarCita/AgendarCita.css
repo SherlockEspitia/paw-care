@@ -1,0 +1,71 @@
+.agendar-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+    padding: 40px 20px;
+}
+
+.agendar-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.agendar-container h2 {
+    font-size: 28px;
+    color: #023b48;
+    margin-bottom: 10px;
+}
+
+.agendar-container p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.agendar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.agendar-form label {
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+}
+
+.agendar-form input,
+.agendar-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.agendar-form input:focus,
+.agendar-form select:focus {
+    outline: none;
+    border-color: #0288d1;
+    box-shadow: 0 0 4px rgba(2, 136, 209, 0.5);
+}
+
+.btn-agendar {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-agendar:hover {
+    background-color: #e05200;
+}
