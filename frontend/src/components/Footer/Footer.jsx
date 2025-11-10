@@ -2,13 +2,12 @@ import './Footer.css'
 
 function Footer(){
     return(
-        <footer>
-            <h2>Soy el footer</h2>
-            <section></section>
-            <section></section>
-            <section></section>
+        <footer className="footer_section">
+            <p>&copy; 2025 Todos los derechos reservados por apPET
+                <a href="#">apPET</a>
+            </p>
         </footer>
     )
 }
 
-export default Footer
+export default Footer;

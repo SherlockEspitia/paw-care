@@ -1,22 +1,39 @@
 import React from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom'
+import logo from '../../img/logo.jpg'
 
-function Header(){
+function Header() {
 
     return (
-        <header>
-            <img src="/src/img/Logo.svg" alt="AppCare" className='logo' height={120} width={120}/>
-            <nav>
-                <a href="/">Inicio</a>
-                <a href="">Servicios</a>
-                <a href="">Tienda</a>
-                <a href="">Educativo</a>
-                <a href="">Sobre Nosotros</a>
-            </nav>
-        </header>
+        <div className="hero_area">
+            <header className="header_section">
+                <div className="container_fluid">
+                    <nav>
+                        <div className="navbar">
+
+                            <Link className="navbar_brand">
+                                <img src={logo} alt="logo" />
+
+                                <span>
+                                    apPET
+                                </span>
+                            </Link>
+
+                            <Link className="nav_link" to="/">Inicio</Link>
+                            <Link className="nav_link" to="/servicios">Servicios</Link>
+                            <Link className="nav_link" to="/galeria">Galería</Link>
+                            <Link className="nav_link" to="/contacto">Contacto</Link>
+
+
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
     )
 
-        
+
 }
 
 export default Header

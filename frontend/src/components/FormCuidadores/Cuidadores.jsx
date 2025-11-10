@@ -1,7 +1,7 @@
 import  { useState } from "react";
-import './Propietarios.css'
+import './Cuidadores.css'
 
-function Propietarios() {
+function Cuidadores() {
     const [formData, setFormData] = useState({
         nombres: '',
         apellidos: '',
@@ -59,7 +59,7 @@ function Propietarios() {
     return (
         <div className="form-container">
             <div className="form-wrapper">
-                <h2>Registrar Propietario</h2>
+                <h2>Registro Cuidadores</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="nombres">Nombres</label>
@@ -88,7 +88,7 @@ function Propietarios() {
                     <div className="form-group">
                         <label htmlFor="email">Correo Electrónico</label>
                         <input
-                            type="email"
+                            type="text"
                             id="email"
                             name="email"
                             value={formData.email}
@@ -140,4 +140,4 @@ function Propietarios() {
     );
 }
 
-export default Propietarios
+export default Cuidadores

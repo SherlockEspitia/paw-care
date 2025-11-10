@@ -2,7 +2,6 @@ from dotenv import dotenv_values
 from pydantic_settings import BaseSettings
 
 ENV = dict(dotenv_values('.env'))
-print(ENV)
 
 class Settings(BaseSettings):
     app_name: str = 'PetCare Api'
