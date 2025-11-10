@@ -7,6 +7,7 @@ import InicioSesion from './components/InicioSesion/InicioSesion';
 import Registro from './components/Registro/Registro';
 import Propietarios from './components/FormPropietarios/Propietarios';
 import Cuidadores from './components/FormCuidadores/Cuidadores';
+import { AgendarCita } from './components/AgendarCita/AgendarCita';
 
 import Home from './Pages/Home';
 import Servicios from './Pages/Servicios';
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/agendar" element={<AgendarCita />} />
         <Route path="/galeria" element={<Galeria />} />
         <Route path="/contacto" element={<Contacto/>} />
         <Route path="/login" element={<InicioSesion />} />
