@@ -30,11 +30,10 @@
   --liver: hsla(14, 26%, 29%, 1);
 }
 
-body,
-html {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: light) {
