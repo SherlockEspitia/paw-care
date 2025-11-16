@@ -1,17 +1,16 @@
-import React from 'react';
 import './App.css';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import InicioSesion from './components/InicioSesion/InicioSesion';
-import Registro from './components/Registro/Registro';
-import Propietarios from './components/FormPropietarios/Propietarios';
-import Cuidadores from './components/FormCuidadores/Cuidadores';
+import { Header, Registro, Footer, Cuidadores, Propietarios, InicioSesion } from '@/components';
+//import Footer from '@/components/Footer';
+//import InicioSesion from './components/InicioSesion';
+//import {Registro} from './components/Registro';
+//import Propietarios from './components/FormPropietarios';
+//import Cuidadores from './components/FormCuidadores';
 
-import Home from './Pages/Home';
-import Servicios from './Pages/Servicios';
-import Galeria from './Pages/Galeria';
-import Contacto from './Pages/Contacto';
+import {Contacto, Home, Galeria, Servicios} from '@/Pages';
+//import Home from './Pages/Home';
+//import Galeria from './Pages/Galeria/Galeria';
+//import Servicios from './Pages/Servicios/Servicios';
 
 
 function App() {

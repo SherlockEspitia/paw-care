@@ -1,6 +1,5 @@
-import React from "react";
 import './SectionClient.css'
-import client from '../../img/client.jpg'
+import client from '@/img/client.jpg'
 
 export const SectionClient = () => {
     return (
@@ -44,5 +43,5 @@ export const SectionClient = () => {
         )
 }
 
-                    export default SectionClient
+export default SectionClient
 

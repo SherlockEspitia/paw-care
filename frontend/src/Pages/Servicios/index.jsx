@@ -1,11 +1,10 @@
-import React from 'react'
 import './Servicios.css'
-import paseos from '../../img/imgPaseos.png'
-import guarderia from '../../img/imgGuarderia.png'
-import adiestramiento from '../../img/imgAdiestramiento.png'
-import servicio from '../../img/imgServicio.jpg'
+import paseos from '@/assets/img/imgPaseos.png'
+import guarderia from '@/assets/img/imgGuarderia.png'
+import adiestramiento from '@/assets/img/imgAdiestramiento.png'
+import servicio from '@/assets/img/imgServicio.jpg'
 
-export const Servicios = () => {
+const Servicios = () => {
     return (
         
             <section className="service_section layout_padding">
@@ -61,3 +60,5 @@ export const Servicios = () => {
 
     )
 }
+
+export default Servicios

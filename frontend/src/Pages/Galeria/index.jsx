@@ -1,12 +1,11 @@
-import React from 'react'
 import './Galeria.css'
-import imgGaleria1 from '../../img/imgGaleria1.jpg'
-import imgGaleria2 from '../../img/imgGaleria2.jpg'
-import imgGaleria3 from '../../img/imgGaleria3.jpg'
-import imgGaleria4 from '../../img/imgGaleria4.jpg'
-import imgGaleria5 from '../../img/imgGaleria5.jpg'
+import imgGaleria1 from '@/img/imgGaleria1.jpg'
+import imgGaleria2 from '@/img/imgGaleria2.jpg'
+import imgGaleria3 from '@/img/imgGaleria3.jpg'
+import imgGaleria4 from '@/img/imgGaleria4.jpg'
+import imgGaleria5 from '@/img/imgGaleria5.jpg'
 
-export const Galeria = () => {
+const Galeria = () => {
     return (
         <section className ="gallery-section layout_padding">
             <div className ="container">
@@ -35,3 +34,5 @@ export const Galeria = () => {
 
     )
 }
+
+export default Galeria

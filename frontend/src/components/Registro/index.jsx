@@ -1,7 +1,7 @@
 import './Registro.css';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-export const Registro = () => {
+const Registro = () => {
     return (
         <section className="registro_section">
             <div className="registro_container">

@@ -1,8 +1,7 @@
-import React from 'react';
-import { Slider } from '../components/Slider/Slider';
+import { Slider } from '@/components';
 import SectionClient from '../components/SectionClient/SectionClient';
 
-function Home() {
+const Home =() => {
     return (
         <>
             <Slider />

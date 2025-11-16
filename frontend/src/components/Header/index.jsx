@@ -2,7 +2,7 @@ import styles from './Header.module.css'
 import { Link } from 'react-router-dom'
 import logo from '@/assets/img/logo.jpg'
 
-function Header() {
+const Header = ()=> {
 
     return (
         <div className={styles.hero_area}>

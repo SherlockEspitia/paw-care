@@ -1,8 +1,8 @@
 import './Slider.css'
-import imgInicio from '../../img/imgInicio.png'
+import imgInicio from '@/img/imgInicio.png'
 import { Link } from 'react-router-dom'
 
-export const Slider = () => {
+const Slider = () => {
     return (
         <section className="slider_section">
             <div className="container">
@@ -30,3 +30,5 @@ export const Slider = () => {
         </section>
     )
 }
+
+export default Slider

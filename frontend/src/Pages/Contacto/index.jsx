@@ -1,10 +1,9 @@
-import React from 'react'
 import './Contacto.css'
-import ubicacion from '../../img/location-white.png'
-import imgTelefono from '../../img/telephone-white.png'
-import imgEmail from '../../img/envelope-white.png'
+import ubicacion from '@/img/location-white.png'
+import imgTelefono from '@/img/telephone-white.png'
+import imgEmail from '@/img/envelope-white.png'
 
-export const Contacto = () => {
+const Contacto = () => {
   return (
     <div className="sub_page">
 
@@ -77,3 +76,5 @@ export const Contacto = () => {
     </div>
   )
 }
+
+export default Contacto;
