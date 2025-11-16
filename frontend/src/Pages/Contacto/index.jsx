@@ -2,6 +2,7 @@ import './Contacto.css'
 import ubicacion from '@/img/location-white.png'
 import imgTelefono from '@/img/telephone-white.png'
 import imgEmail from '@/img/envelope-white.png'
+import { Link } from 'react-router-dom'
 
 const Contacto = () => {
   return (
@@ -38,7 +39,7 @@ const Contacto = () => {
       {/* info section */}
       <section className="info_section">
         <div className="info_items">
-          <a href="#">
+          <Link to="#">
             <div className="item">
               <div className="img-box">
                 <img src={ ubicacion } alt="Ubicación" />
@@ -47,8 +48,8 @@ const Contacto = () => {
                 <p>Ubicación</p>
               </div>
             </div>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <div className="item">
               <div className="img-box">
                 <img src={ imgTelefono } alt="Teléfono" />
@@ -57,8 +58,8 @@ const Contacto = () => {
                 <p>+57 1234567890</p>
               </div>
             </div>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <div className="item">
               <div className="img-box">
                 <img src={ imgEmail } alt="Email" />
@@ -67,7 +68,7 @@ const Contacto = () => {
                 <p>appet@gmail.com</p>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
 

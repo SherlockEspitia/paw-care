@@ -1,6 +1,6 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header, Registro, Footer, Cuidadores, Propietarios, InicioSesion } from '@/components';
+import  { Routes, Route} from 'react-router-dom';
+import { Registro, Cuidadores, Propietarios, InicioSesion, Layout } from '@/components';
 //import Footer from '@/components/Footer';
 //import InicioSesion from './components/InicioSesion';
 //import {Registro} from './components/Registro';
@@ -15,20 +15,18 @@ import {Contacto, Home, Galeria, Servicios} from '@/Pages';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/servicios" element={<Servicios />} />
-        <Route path="/galeria" element={<Galeria />} />
-        <Route path="/contacto" element={<Contacto/>} />
-        <Route path="/login" element={<InicioSesion />} />
-        <Route path="/registro" element={<Registro />} />
-        <Route path="/registro/propietario" element={<Propietarios />} /> 
-        <Route path="/registro/cuidador" element={<Cuidadores />} />
-      </Routes>
-      <Footer />
-    </Router>    
+    <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/galeria" element={<Galeria />} />
+          <Route path="/contacto" element={<Contacto/>} />
+          <Route path="/login" element={<InicioSesion />} />
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/registro/propietario" element={<Propietarios />} /> 
+          <Route path="/registro/cuidador" element={<Cuidadores />} />
+        </Routes>     
+    </Layout>    
   );
 }
 

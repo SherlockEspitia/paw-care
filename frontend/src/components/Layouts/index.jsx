@@ -1,8 +1,7 @@
 import './Layout.css'
-import Header from '../Header'
-import Footer from '../Footer'
+import { Header, Footer} from '@/components'
 
-function Layout({children}){
+const Layout= ({children})=>{
     return(
         <>
             <Header/>

@@ -1,6 +1,5 @@
-import React from 'react'
 import './InicioSesion.css'
-
+import { Link } from 'react-router-dom'
 
 export const InicioSesion = () => {
     return (
@@ -41,9 +40,9 @@ export const InicioSesion = () => {
                             <span>Recordarme</span>
                         </label>
 
-                        <a className="link" href="#" title="Recuperar contraseña">
+                        <Link className="link" to="#" title="Recuperar contraseña">
                             ¿Olvidaste tu contraseña?
-                        </a>
+                        </Link>
                     </div>
 
                     <button className="btn" type="submit">
@@ -53,13 +52,13 @@ export const InicioSesion = () => {
 
                 <p className="legal">
                     Al continuar, aceptas nuestros{" "}
-                    <a className="link" href="#">
+                    <Link className="link" to="#">
                         Términos
-                    </a>{" "}
+                    </Link>{" "}
                     y{" "}
-                    <a className="link" href="#">
+                    <Link className="link" to="#">
                         Política de privacidad
-                    </a>
+                    </Link>
                     .
                 </p>
             </section>
