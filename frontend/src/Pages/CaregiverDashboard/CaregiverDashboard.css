@@ -1,0 +1,22 @@
+.caregiver-dashboard {
+  display: flex;
+  height: calc(100vh - 80px);
+  gap: 0;
+}
+
+.caregiver-sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+.caregiver-dashboard {
+  display: flex;
+  height: calc(100vh - 80px);
+  gap: 0;
+}
+
+.caregiver-sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 
