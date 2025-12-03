@@ -1,0 +1,59 @@
+.agenda-list {
+  padding: 2rem;
+}
+
+.agenda-list h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.agenda-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.agenda-list table thead {
+  background-color: #f5f5f5;
+}
+
+.agenda-list table th,
+.agenda-list table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.agenda-list table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.agenda-list button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.agenda-list button:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
